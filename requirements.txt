@@ -1,0 +1,5 @@
+django>=6.0
+asgiref
+sqlparse
+whitenoise
+gunicorn

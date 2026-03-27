@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Full-Stack Calculator</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Consolas&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display-container">
+            <input type="text" id="display" readonly value="0">
+        </div>
+        <div class="buttons-grid">
+            <button class="btn btn-special" onclick="handleInput('AC')">AC</button>
+            <button class="btn btn-special" onclick="handleInput('CE')">CE</button>
+            <button class="btn btn-operator" onclick="handleInput('%')">%</button>
+            <button class="btn btn-operator" onclick="handleInput('÷')">÷</button>
+
+            <button class="btn" onclick="handleInput('7')">7</button>
+            <button class="btn" onclick="handleInput('8')">8</button>
+            <button class="btn" onclick="handleInput('9')">9</button>
+            <button class="btn btn-operator" onclick="handleInput('×')">×</button>
+
+            <button class="btn" onclick="handleInput('4')">4</button>
+            <button class="btn" onclick="handleInput('5')">5</button>
+            <button class="btn" onclick="handleInput('6')">6</button>
+            <button class="btn btn-operator" onclick="handleInput('-')">-</button>
+
+            <button class="btn" onclick="handleInput('1')">1</button>
+            <button class="btn" onclick="handleInput('2')">2</button>
+            <button class="btn" onclick="handleInput('3')">3</button>
+            <button class="btn btn-operator" onclick="handleInput('+')">+</button>
+
+            <button class="btn btn-zero" onclick="handleInput('0')">0</button>
+            <button class="btn" onclick="handleInput('.')">.</button>
+            <button class="btn btn-equal" id="equals-btn">=</button>
+        </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
